@@ -25,6 +25,9 @@ keycloak-http:
             secretName: cloudsql-instance-credentials
       persistence:
         dbHost: 127.0.0.1
+      service:
+        annotations:
+          fabric8.io/ingress.name: "serac"
 keycloak:
   cloudsql:
     disabled: false
